@@ -1,8 +1,11 @@
 const express = require("express");
 const port = 3038; 
 const sequelize = require("./database/sequelize");
+const staffRouter =require('./Router/staffRouter');
+
 const app = express();
 app.use(express.json());
+app.use(staffRouter)
 
 const server =async() =>{
     try {

@@ -1,5 +1,5 @@
 const { Sequelize, DataTypes, Model } = require('sequelize');
-const sequelize = new Sequelize('sqlite::memory:');
+const sequelize = require('../database/sequelize')
 
 class staff extends Model {}
 
@@ -36,5 +36,4 @@ staff.init(
   },
 );
 
-// the defined model is the class itself
-console.log(User === sequelize.models.User); // true
+module.exports = staff
